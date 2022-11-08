@@ -1,4 +1,4 @@
-package org.prog;
+package org.prog.web;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,9 +25,9 @@ public class RozetkaTests extends BaseTest {
 
 
     private void loadRozetkaPage() {
-        driver.get("about::blank");
-        driver.get("https://google.com/");
-        driver.manage().window().maximize();
+//        driver.get("about::blank");
+//        driver.get("https://google.com/");
+//        driver.manage().window().maximize();
     }
 
 }
