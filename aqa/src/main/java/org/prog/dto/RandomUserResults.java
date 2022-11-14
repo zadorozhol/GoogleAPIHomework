@@ -2,6 +2,7 @@ package org.prog.dto;
 
 import lombok.*;
 
+import javax.lang.model.element.Name;
 import java.util.List;
 
 @AllArgsConstructor
@@ -11,5 +12,5 @@ public class RandomUserResults {
 
     @Getter
     @Setter
-    private List<PersonDto> results;
+    private List <PersonDto> results;
 }

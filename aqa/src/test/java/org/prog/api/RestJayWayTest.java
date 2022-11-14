@@ -26,16 +26,16 @@ public class RestJayWayTest {
 
         resp.body().prettyPrint();
 
-        JsonPath maleNamePath = JsonPath.compile("$.results[?].name.first",
+        JsonPath maleNamePath = JsonPath.compile("$.results[?].name.first.last",
                 filter(where("gender").eq("male")));
-        JsonPath femaleNamePath = JsonPath.compile("$.results[?].name.first",
-                filter(where("gender").eq("female")));
+//        JsonPath femalenamePath = JsonPath.compile("$.results[?].name.first.last",
+//                filter(where("gender").eq("female")));
 
         List<String> maleNames = JsonPath.using(NEW_PATH_CONFIGURATION).parse(resp.body().asString()).read(maleNamePath);
-        List<String> femaleNames = JsonPath.using(NEW_PATH_CONFIGURATION).parse(resp.body().asString()).read(femaleNamePath);
+//        List<String> femaleNames = JsonPath.using(NEW_PATH_CONFIGURATION).parse(resp.body().asString()).read(femalenamePath);
 
         System.out.println(maleNames.size());
-        System.out.println(femaleNames.size());
+//        System.out.println(femaleNames.size());
     }
 
     public static final Configuration NEW_PATH_CONFIGURATION = Configuration.builder()
